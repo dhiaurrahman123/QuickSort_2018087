@@ -62,5 +62,15 @@ void q_short(int low, int high) {
 			cmp_count++;
 		}
 		cmp_count++;
+		if (i < j)
+		{
+			swap(i, j);
+			mov_count++;
+		}
 	}
+	if (low < j) {
+		swap(low, j);
+		mov_count++;
+	}
+	q_short(low, j - 1);
 }
